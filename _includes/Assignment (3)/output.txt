@@ -1,0 +1,644 @@
+The LogisticPartner with id : 15001 has been added to the System
+
+The LogisticPartner with id : 15002 has been added to the System
+
+The LogisticPartner with id : 15003 has been added to the System
+
+The LogisticPartner with id : 15004 has been added to the System
+
+The LogisticPartner with id : 15005 has been added to the System
+
+The LogisticPartner with id : 15006 has been added to the System
+
+The LogisticPartner with id : 15007 has been added to the System
+
+The LogisticPartner with id : 15008 has been added to the System
+
+The LogisticPartner with id : 15009 has been added to the System
+
+The LogisticPartner with id : 15010 has been added to the System
+
+The LogisticPartner with id : 15006 already exists
+
+The buyer with id : 17001 has been added to the System
+
+The buyer with id : 17002 has been added to the System
+
+The buyer with id : 17003 has been added to the System
+
+The buyer with id : 17004 has been added to the System
+
+The buyer with id : 17005 has been added to the System
+
+The buyer with id : 17006 has been added to the System
+
+The buyer with id : 17007 has been added to the System
+
+The buyer with id : 17008 has been added to the System
+
+The buyer with id : 17009 has been added to the System
+
+The buyer with id : 17010 has been added to the System
+
+The buyer with id : 17011 has been added to the System
+
+The buyer with id : 17012 has been added to the System
+
+The buyer with id : 17013 has been added to the System
+
+The buyer with id : 17014 has been added to the System
+
+The buyer with id : 17015 has been added to the System
+
+The buyer with id : 17016 has been added to the System
+
+The buyer with id : 17017 has been added to the System
+
+The buyer with id : 17018 has been added to the System
+
+The buyer with id : 17019 has been added to the System
+
+The buyer with id : 17020 has been added to the System
+
+The buyer with id : 17021 has been added to the System
+
+The buyer with id : 17009 already exists
+
+The buyer with id : 17022 has been added to the System
+
+The buyer with id : 17023 has been added to the System
+
+The buyer with id : 17024 has been added to the System
+
+The buyer with id : 17025 has been added to the System
+
+The seller with id : 16001 has been added to the System
+
+The seller with id : 16002 has been added to the System
+
+The seller with id : 16003 has been added to the System
+
+The seller with id : 16004 has been added to the System
+
+The seller with id : 16005 has been added to the System
+
+The seller with id : 16004 already exists
+
+The item : 501 has been added to the System
+
+The item : 505 has been added to the System
+
+The item : 506 has been added to the System
+
+The item : 507 has been added to the System
+
+The item : 502 has been added to the System
+
+The item : 508 has been added to the System
+
+The item : 511 has been added to the System
+
+The item : 512 has been added to the System
+
+The item : 516 has been added to the System
+
+The item : 518 has been added to the System
+
+The item : 520 has been added to the System
+
+The item : 523 has been added to the System
+
+The item : 525 has been added to the System
+
+The item : 524 has been added to the System
+
+The item with id : 516 already exists
+
+The item : 522 has been added to the System
+
+The item : 519 has been added to the System
+
+The item : 517 has been added to the System
+
+The item : 513 has been added to the System
+
+The item : 514 has been added to the System
+
+The item : 509 has been added to the System
+
+The item : 510 has been added to the System
+
+The item : 515 has been added to the System
+
+The item : 503 has been added to the System
+
+The item : 504 has been added to the System
+
+The item : 521 has been added to the System
+
+The order of buyer with id : 17001 has been initialized with number : 101
+The item with id : 501 has been added to the orderId: 101
+
+The item with id : 505 has been added to the orderId: 101
+
+The item with id : 506 has been added to the orderId: 101
+
+The item with id : 507 has been added to the orderId: 101
+
+The item with id : 501 has been added to the orderId: 101
+
+The order with id 101 has been shipped by the logistic Partner 15001
+
+The status of the order with id 101 has been chanaged to Shipped
+
+The status of the order with id 101 has been chanaged to Delivered
+
+There is no buyer with id : 170455
+
+The order of buyer with id : 17001 has been initialized with number : 102
+The item with id : 515 has been added to the orderId: 102
+
+The item with id : 503 has been added to the orderId: 102
+
+The order with id 102 has been shipped by the logistic Partner 15002
+
+The status of the order with id 102 has been chanaged to Shipped
+
+The status of the order with id 102 has been chanaged to Delivered
+
+The order of buyer with id : 17001 has been initialized with number : 103
+The item with id : 524 has been added to the orderId: 103
+
+The item with id : 522 has been added to the orderId: 103
+
+The item with id : 517 has been added to the orderId: 103
+
+The order with id 103 has been shipped by the logistic Partner 15009
+
+The status of the order with id 103 has been chanaged to Shipped
+
+The status of the order with id 103 has been chanaged to Delivered
+
+The order of buyer with id : 17018 has been initialized with number : 104
+The item with id : 501 has been added to the orderId: 104
+
+The item with id : 505 has been added to the orderId: 104
+
+The item with id : 506 has been added to the orderId: 104
+
+The item with id : 507 has been added to the orderId: 104
+
+The order with id 104 has been shipped by the logistic Partner 15001
+
+The status of the order with id 104 has been chanaged to Shipped
+
+The status of the order with id 104 has been chanaged to Delivered
+
+The order of buyer with id : 17018 has been initialized with number : 105
+The item with id : 515 has been added to the orderId: 105
+
+The item with id : 503 has been added to the orderId: 105
+
+The order with id 105 has been shipped by the logistic Partner 15002
+
+The status of the order with id 105 has been chanaged to Shipped
+
+The status of the order with id 105 has been chanaged to Delivered
+
+The order of buyer with id : 17018 has been initialized with number : 106
+There is no item added for the order id 106
+
+The item with id : 524 has been added to the orderId: 106
+
+The item with id : 522 has been added to the orderId: 106
+
+The order with id 106 has been shipped by the logistic Partner 15009
+
+The status of the order with id 106 has been chanaged to Shipped
+
+The status of the order with id 106 has been chanaged to Delivered
+
+The order of buyer with id : 17022 has been initialized with number : 107
+The item with id : 515 has been added to the orderId: 107
+
+The item with id : 503 has been added to the orderId: 107
+
+The order with id 107 has been shipped by the logistic Partner 15002
+
+The status of the order with id 107 has been chanaged to Shipped
+
+The status of the order with id 107 has been chanaged to Delivered
+
+The order of buyer with id : 17022 has been initialized with number : 108
+The item with id : 524 has been added to the orderId: 108
+
+The item with id : 522 has been added to the orderId: 108
+
+The order with id 108 has been shipped by the logistic Partner 15009
+
+The status of the order with id 108 has been chanaged to Shipped
+
+The status of the order with id 108 has been chanaged to Delivered
+
+The order of buyer with id : 17022 has been initialized with number : 109
+There is no buyer with id : 1703434
+
+The item with id : 51543443 is not in the system
+
+The item with id : 515 is out of stock
+
+The item with id : 516 has been added to the orderId: 109
+
+The item with id : 518 has been added to the orderId: 109
+
+The item with id : 520 has been added to the orderId: 109
+
+The item with id : 523 has been added to the orderId: 109
+
+The item with id : 525 has been added to the orderId: 109
+
+There is no order with id : 4343
+
+The order with id 109 has been shipped by the logistic Partner 15010
+
+The status of the order with id 109 has been chanaged to Shipped
+
+There is no order with id : 5263
+
+The status of the order with id 109 has been chanaged to Delivered
+
+The order of buyer with id : 17022 has been initialized with number : 110
+The item with id : 505 has been added to the orderId: 110
+
+The item with id : 506 has been added to the orderId: 110
+
+There is no logisticPartner with id : 154455
+
+The order with id 110 has been shipped by the logistic Partner 15002
+
+The status of the order with id 110 has been chanaged to Shipped
+
+The status of the order with id 110 has been chanaged to Delivered
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 101
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17001                          Buyer name :                   Moukhled_AlOutaibi             
+ Seller Id :                    16003                          Seller name :                  Ghazi_Alqahtani                
+ logistic Partner Id :          15001                          logistic Partner name :        Alaa_Ahmad_Zahrani             
+ Shipping Cost : 70.20  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 501                            Setalliite_Laptop              1499.00                       
+ 505                            HP_LaserPrinter                2200.00                       
+ 506                            MacBook                        4100.00                       
+ 507                            Toshiba_Laptop                 2500.00                       
+ 501                            Setalliite_Laptop              1499.00                       
+------------------------------------------------------------------------------------------------------------
+ Total : 11798.00 
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 102
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17001                          Buyer name :                   Moukhled_AlOutaibi             
+ Seller Id :                    16002                          Seller name :                  Salman_Turki                   
+ logistic Partner Id :          15002                          logistic Partner name :        Zaheer_Abbas                   
+ Shipping Cost : 11.20  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 515                            DieselPerfume                  55.00                         
+ 503                            GucciPerfume                   376.00                        
+------------------------------------------------------------------------------------------------------------
+ Total : 431.00 
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 103
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17001                          Buyer name :                   Moukhled_AlOutaibi             
+ Seller Id :                    16001                          Seller name :                  Ali_Alghamdi                   
+ logistic Partner Id :          15009                          logistic Partner name :        Manzar_Zahrani                 
+ Shipping Cost : 4.50  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 524                            PowerBank                      95.00                         
+ 522                            SecoWatch                      590.00                        
+ 517                            EmergencyLight                 200.00                        
+------------------------------------------------------------------------------------------------------------
+ Total : 885.00 
+
+
+********************************* Seller's Items************************************************************************** 
+ Seller Id :                    16001                          Seller name :                  Ali_Alghamdi                  
+------------------------------------------------------------------------------------------------------------
+ ItemId                        Item name                     In stock                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 524                           PowerBank                     17                            95.00                         
+ 522                           SecoWatch                     17                            590.00                        
+ 519                           SportsWatch                   20                            230.00                        
+ 517                           EmergencyLight                19                            200.00                        
+ 513                           FlashLight                    20                            2900.00                       
+ 514                           DVDPlayer                     20                            220.00                        
+ 509                           HairTrimmer                   20                            130.00                        
+ 510                           FlashLight                    20                            80.00                         
+
+
+********************************* Seller's Items************************************************************************** 
+ Seller Id :                    16002                          Seller name :                  Salman_Turki                  
+------------------------------------------------------------------------------------------------------------
+ ItemId                        Item name                     In stock                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 515                           DieselPerfume                 0                             55.00                         
+ 503                           GucciPerfume                  17                            376.00                        
+
+**********************************The records of the transactions of seller************************************************ 
+ Seller Id                      16001                          Seller name                    Ali_Alghamdi                  
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Buyer Id                      Buyer name                    orderId                       Purchase Date                           Amount                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ 17001                          Moukhled_AlOutaibi            101                           Mon Mar 19 03:57:04 AST 2018            11798.00                      
+ 17001                          Moukhled_AlOutaibi            102                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17001                          Moukhled_AlOutaibi            103                           Mon Mar 19 03:57:04 AST 2018            885.00                        
+ 17018                          Fatima_AlYassin               104                           Mon Mar 19 03:57:04 AST 2018            10299.00                      
+ 17018                          Fatima_AlYassin               105                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17018                          Fatima_AlYassin               106                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             107                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17022                          Ibrahim_AlHamaidi             108                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             109                           Mon Mar 19 03:57:04 AST 2018            990.00                        
+ 17022                          Ibrahim_AlHamaidi             110                           Mon Mar 19 03:57:04 AST 2018            6300.00                       
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Total : 32935.00 
+
+**********************************The records of the transactions of seller************************************************ 
+ Seller Id                      16004                          Seller name                    Hamza_Jalal                   
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Buyer Id                      Buyer name                    orderId                       Purchase Date                           Amount                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ 17001                          Moukhled_AlOutaibi            101                           Mon Mar 19 03:57:04 AST 2018            11798.00                      
+ 17001                          Moukhled_AlOutaibi            102                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17001                          Moukhled_AlOutaibi            103                           Mon Mar 19 03:57:04 AST 2018            885.00                        
+ 17018                          Fatima_AlYassin               104                           Mon Mar 19 03:57:04 AST 2018            10299.00                      
+ 17018                          Fatima_AlYassin               105                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17018                          Fatima_AlYassin               106                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             107                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17022                          Ibrahim_AlHamaidi             108                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             109                           Mon Mar 19 03:57:04 AST 2018            990.00                        
+ 17022                          Ibrahim_AlHamaidi             110                           Mon Mar 19 03:57:04 AST 2018            6300.00                       
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Total : 32935.00 
+
+
+********************************* Seller's Items************************************************************************** 
+ Seller Id :                    16003                          Seller name :                  Ghazi_Alqahtani               
+------------------------------------------------------------------------------------------------------------
+ ItemId                        Item name                     In stock                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 501                           Setalliite_Laptop             17                            1499.00                       
+ 505                           HP_LaserPrinter               17                            2200.00                       
+ 506                           MacBook                       17                            4100.00                       
+ 507                           Toshiba_Laptop                18                            2500.00                       
+
+**********************************The records of the transactions of seller************************************************ 
+ Seller Id                      16005                          Seller name                    Ameer_Bandar                  
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Buyer Id                      Buyer name                    orderId                       Purchase Date                           Amount                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ 17001                          Moukhled_AlOutaibi            101                           Mon Mar 19 03:57:04 AST 2018            11798.00                      
+ 17001                          Moukhled_AlOutaibi            102                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17001                          Moukhled_AlOutaibi            103                           Mon Mar 19 03:57:04 AST 2018            885.00                        
+ 17018                          Fatima_AlYassin               104                           Mon Mar 19 03:57:04 AST 2018            10299.00                      
+ 17018                          Fatima_AlYassin               105                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17018                          Fatima_AlYassin               106                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             107                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17022                          Ibrahim_AlHamaidi             108                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             109                           Mon Mar 19 03:57:04 AST 2018            990.00                        
+ 17022                          Ibrahim_AlHamaidi             110                           Mon Mar 19 03:57:04 AST 2018            6300.00                       
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Total : 32935.00 
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 107
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17022                          Buyer name :                   Ibrahim_AlHamaidi              
+ Seller Id :                    16002                          Seller name :                  Salman_Turki                   
+ logistic Partner Id :          15002                          logistic Partner name :        Zaheer_Abbas                   
+ Shipping Cost : 11.20  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 515                            DieselPerfume                  55.00                         
+ 503                            GucciPerfume                   376.00                        
+------------------------------------------------------------------------------------------------------------
+ Total : 431.00 
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 108
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17022                          Buyer name :                   Ibrahim_AlHamaidi              
+ Seller Id :                    16001                          Seller name :                  Ali_Alghamdi                   
+ logistic Partner Id :          15009                          logistic Partner name :        Manzar_Zahrani                 
+ Shipping Cost : 3.60  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 524                            PowerBank                      95.00                         
+ 522                            SecoWatch                      590.00                        
+------------------------------------------------------------------------------------------------------------
+ Total : 685.00 
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 110
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17022                          Buyer name :                   Ibrahim_AlHamaidi              
+ Seller Id :                    16003                          Seller name :                  Ghazi_Alqahtani                
+ logistic Partner Id :          15002                          logistic Partner name :        Zaheer_Abbas                   
+ Shipping Cost : 44.80  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 505                            HP_LaserPrinter                2200.00                       
+ 506                            MacBook                        4100.00                       
+------------------------------------------------------------------------------------------------------------
+ Total : 6300.00 
+
+**********************************The records of the transactions of buyer************************************************ 
+ Buyer Id :                     17001                          Buyer name :                   Moukhled_AlOutaibi            
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Seller Id                     Seller name                   orderId                       Purchase Date                           Amount                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ 16003                          Ghazi_Alqahtani               101                           Mon Mar 19 03:57:04 AST 2018            11798.00                      
+ 16002                          Salman_Turki                  102                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 16001                          Ali_Alghamdi                  103                           Mon Mar 19 03:57:04 AST 2018            885.00                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Total : 13114.00 
+
+**********************************The records of the transactions of buyer************************************************ 
+ Buyer Id :                     17018                          Buyer name :                   Fatima_AlYassin               
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Seller Id                     Seller name                   orderId                       Purchase Date                           Amount                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ 16003                          Ghazi_Alqahtani               104                           Mon Mar 19 03:57:04 AST 2018            10299.00                      
+ 16002                          Salman_Turki                  105                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 16001                          Ali_Alghamdi                  106                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Total : 11415.00 
+
+**********************************The records of the transactions of buyer************************************************ 
+ Buyer Id :                     17018                          Buyer name :                   Fatima_AlYassin               
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Seller Id                     Seller name                   orderId                       Purchase Date                           Amount                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ 16003                          Ghazi_Alqahtani               104                           Mon Mar 19 03:57:04 AST 2018            10299.00                      
+ 16002                          Salman_Turki                  105                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 16001                          Ali_Alghamdi                  106                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Total : 11415.00 
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 104
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17018                          Buyer name :                   Fatima_AlYassin                
+ Seller Id :                    16003                          Seller name :                  Ghazi_Alqahtani                
+ logistic Partner Id :          15001                          logistic Partner name :        Alaa_Ahmad_Zahrani             
+ Shipping Cost : 70.20  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 501                            Setalliite_Laptop              1499.00                       
+ 505                            HP_LaserPrinter                2200.00                       
+ 506                            MacBook                        4100.00                       
+ 507                            Toshiba_Laptop                 2500.00                       
+------------------------------------------------------------------------------------------------------------
+ Total : 10299.00 
+
+**********************************The records of the transactions of seller************************************************ 
+ Seller Id                      16003                          Seller name                    Ghazi_Alqahtani               
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Buyer Id                      Buyer name                    orderId                       Purchase Date                           Amount                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ 17001                          Moukhled_AlOutaibi            101                           Mon Mar 19 03:57:04 AST 2018            11798.00                      
+ 17001                          Moukhled_AlOutaibi            102                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17001                          Moukhled_AlOutaibi            103                           Mon Mar 19 03:57:04 AST 2018            885.00                        
+ 17018                          Fatima_AlYassin               104                           Mon Mar 19 03:57:04 AST 2018            10299.00                      
+ 17018                          Fatima_AlYassin               105                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17018                          Fatima_AlYassin               106                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             107                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17022                          Ibrahim_AlHamaidi             108                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             109                           Mon Mar 19 03:57:04 AST 2018            990.00                        
+ 17022                          Ibrahim_AlHamaidi             110                           Mon Mar 19 03:57:04 AST 2018            6300.00                       
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Total : 32935.00 
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 105
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17018                          Buyer name :                   Fatima_AlYassin                
+ Seller Id :                    16002                          Seller name :                  Salman_Turki                   
+ logistic Partner Id :          15002                          logistic Partner name :        Zaheer_Abbas                   
+ Shipping Cost : 11.20  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 515                            DieselPerfume                  55.00                         
+ 503                            GucciPerfume                   376.00                        
+------------------------------------------------------------------------------------------------------------
+ Total : 431.00 
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 106
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17018                          Buyer name :                   Fatima_AlYassin                
+ Seller Id :                    16001                          Seller name :                  Ali_Alghamdi                   
+ logistic Partner Id :          15009                          logistic Partner name :        Manzar_Zahrani                 
+ Shipping Cost : 3.60  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 524                            PowerBank                      95.00                         
+ 522                            SecoWatch                      590.00                        
+------------------------------------------------------------------------------------------------------------
+ Total : 685.00 
+
+
+********************************* Seller's Items************************************************************************** 
+ Seller Id :                    16004                          Seller name :                  Hamza_Jalal                   
+------------------------------------------------------------------------------------------------------------
+ ItemId                        Item name                     In stock                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 502                           SportsShirt                   20                            88.00                         
+ 508                           DressShirt                    20                            115.00                        
+ 511                           JoggingShoes                  20                            210.00                        
+ 512                           TrackSuit                     20                            370.00                        
+ 516                           JoggerShoes                   19                            110.00                        
+ 518                           Sunglasses                    19                            120.00                        
+ 520                           SchoolUniform                 19                            240.00                        
+ 523                           PolaroidGlass                 19                            280.00                        
+ 525                           SchoolUniform                 19                            240.00                        
+
+**********************************The records of the transactions of seller************************************************ 
+ Seller Id                      16002                          Seller name                    Salman_Turki                  
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Buyer Id                      Buyer name                    orderId                       Purchase Date                           Amount                        
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ 17001                          Moukhled_AlOutaibi            101                           Mon Mar 19 03:57:04 AST 2018            11798.00                      
+ 17001                          Moukhled_AlOutaibi            102                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17001                          Moukhled_AlOutaibi            103                           Mon Mar 19 03:57:04 AST 2018            885.00                        
+ 17018                          Fatima_AlYassin               104                           Mon Mar 19 03:57:04 AST 2018            10299.00                      
+ 17018                          Fatima_AlYassin               105                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17018                          Fatima_AlYassin               106                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             107                           Mon Mar 19 03:57:04 AST 2018            431.00                        
+ 17022                          Ibrahim_AlHamaidi             108                           Mon Mar 19 03:57:04 AST 2018            685.00                        
+ 17022                          Ibrahim_AlHamaidi             109                           Mon Mar 19 03:57:04 AST 2018            990.00                        
+ 17022                          Ibrahim_AlHamaidi             110                           Mon Mar 19 03:57:04 AST 2018            6300.00                       
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Total : 32935.00 
+
+
+********************************* Seller's Items************************************************************************** 
+ Seller Id :                    16005                          Seller name :                  Ameer_Bandar                  
+------------------------------------------------------------------------------------------------------------
+ ItemId                        Item name                     In stock                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 504                           DecorationPaper               20                            28.00                         
+ 521                           GiftPack                      20                            290.00                        
+
+
+*********************************Details of order**************************************************************************
+ OrderId : 109
+ Order date : Mon Mar 19 03:57:04 AST 2018 
+ Buyer Id :                     17022                          Buyer name :                   Ibrahim_AlHamaidi              
+ Seller Id :                    16004                          Seller name :                  Hamza_Jalal                    
+ logistic Partner Id :          15010                          logistic Partner name :        Ghada_Ali_Zahrani              
+ Shipping Cost : 17.60  
+ The status of the order : Delivered
+------------------------------------------------------------------------------------------------------------
+ ItemId                         Item name                      Price                         
+------------------------------------------------------------------------------------------------------------
+ 516                            JoggerShoes                    110.00                        
+ 518                            Sunglasses                     120.00                        
+ 520                            SchoolUniform                  240.00                        
+ 523                            PolaroidGlass                  280.00                        
+ 525                            SchoolUniform                  240.00                        
+------------------------------------------------------------------------------------------------------------
+ Total : 990.00 
+
