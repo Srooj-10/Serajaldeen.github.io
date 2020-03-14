@@ -1,0 +1,151 @@
+import java.util.Scanner;
+public class P11741464BA1 {
+    public static void main(String[]args ) {
+        Scanner Hotel = new Scanner(System.in);
+        
+        /*First assign the variables
+          CPD is the cost per room
+          sh_Line is short line
+        */
+        int floors;
+        int rooms;
+        int CPD;
+        final int total_rooms;
+        String Line= "____________________________________________________";
+        String sh_Line = "____________________________";
+        
+        /*
+          Re_thur is the Reserved rooms in the thursday
+          and NonRe_thur is Non_reserved rooms in the thursday
+          and Income_thur is the Income money in the thursday
+          and finally Occupancy_thur is the Occupancy in the thursday
+        */
+        int Re_thur;
+        int NonRe_thur;
+        int Income_thur;
+        double Occupancy_thur;
+        
+        /*
+          Re_fri is the Reserved rooms in the friday
+          and NonRe_fri is Non_reserved rooms in the friday
+          and Income_fri is the Income money in the frisday
+          and finally Occupancy_fri is the Occupancy in the frisday
+        */
+        int Re_fri;
+        int NonRe_fri;
+        int Income_fri;
+        double Occupancy_fri;
+        
+        /*
+          Re_sat is the Reserved rooms in the saturday
+          and NonRe_sat is Non_reserved rooms in the saturday
+          and Income_fri is the Income money in the frisday
+          and finally Occupancy_sat is the Occupancy in the saturday
+        */
+        int Re_sat;
+        int NonRe_sat;
+        int Income_sat;
+        double Occupancy_sat;
+        
+        //total_Re is the total reserved rooms
+        //total_NonRe is the total Non_reserved rooms
+        int total_Re;
+        int total_NonRe;
+        int total_Incomes;
+        double total_occupancy;
+        
+        System.out.println(Line + sh_Line + "\n" + sh_Line +
+                " Hotel Mangement System " + sh_Line);
+        
+        System.out.println("\nWelcome to our Hotel Mangement System," +
+                "we can help you to manage your hotel.\n");
+        
+        //The printf for bonuce
+        System.out.printf("%11s%s%s%s%s%s","How ","many ","floor ","in ",
+                "your ","hotel? ");
+        floors = Hotel.nextInt();
+        
+        System.out.printf("%11s%s%s%s%s%s","How ","many ","rooms ","in ",
+                "each ","floor? ");
+        rooms = Hotel.nextInt();
+        
+        System.out.printf("%11s%s%s%s%s%s","How ","much ","room ","cost ",
+                "per ","day? ");
+        CPD = Hotel.nextInt();
+        
+        System.out.printf("%11s%s%s%s%s%n","How ","many ","reserved ","rooms ",
+                "in:");
+                 
+        total_rooms = floors * rooms;
+        
+        //The printf for bonuce
+        System.out.printf("%24s","Thursday: ");
+        Re_thur = Hotel.nextInt();
+        
+        /*To get the non reserved rooms in the thursday I subtracted the 
+        total rooms from the reserved rooms in the thursday
+          And to get the Income in the thursday I multiplyed the reserved rooms
+        in the cost per room
+          And to get the Occupancy in the thursday i multiplayed the reserved
+        rooms with one hundred (with one digit on the left so i can get double
+        number) and then divided the outcome on the total rooms
+        */ 
+        NonRe_thur = total_rooms - Re_thur;
+        Income_thur = Re_thur * CPD;
+        Occupancy_thur = (Re_thur * 100.0) / total_rooms;
+        
+        //The same here
+        System.out.printf("%24s","Friday  : ");
+        Re_fri = Hotel.nextInt();
+        NonRe_fri = total_rooms - Re_fri;
+        Income_fri = Re_fri * CPD;
+        Occupancy_fri = (Re_fri * 100.0) / total_rooms;
+        
+        //The same here
+        System.out.printf("%24s","Saturday: ");
+        Re_sat = Hotel.nextInt();
+        NonRe_sat = total_rooms - Re_sat;
+        Income_sat = Re_sat * CPD;
+        Occupancy_sat = (Re_sat * 100.0) / total_rooms;
+        
+        /*
+          To get the total reserved rooms in the weekends I added all the
+        reserved rooms togther
+          And to get the total Non_reserved rooms in the weekends I added all 
+        the Non_reserved rooms togther
+          And to get the total incomes I added all the incomes togther
+        */
+        total_Re = Re_thur + Re_fri + Re_sat;
+        total_NonRe = NonRe_thur + NonRe_fri + NonRe_sat;
+        total_Incomes = Income_thur + Income_fri + Income_sat;
+        total_occupancy = (Occupancy_thur + Occupancy_fri +
+                Occupancy_sat) / 3.0;
+        
+        System.out.println(Line + sh_Line);
+        
+        //The printf for bonuce
+        System.out.printf("%12s%s%s%s%s%n%n","Your ","hotel ","report ","is ",
+                "here...");
+        
+        System.out.printf("%s%21s%6s%18s%6s%9s%15s%n","Day","Reserved","rooms",
+                "Non_reserved","rooms","Incomes","Occupancy");
+        
+        System.out.printf("%-16s%-20d%-20d%-13d%-10.2f%n","Thursday", Re_thur, 
+                NonRe_thur, Income_thur, Occupancy_thur);
+        
+        System.out.printf("%-16s%-20d%-20d%-13d%-10.2f%n","Friday", Re_fri,
+                NonRe_fri, Income_fri, Occupancy_fri);
+        
+        System.out.printf("%-16s%-20d%-20d%-13d%-10.2f%n","Saturday", Re_sat, 
+                NonRe_sat, Income_sat, Occupancy_sat);
+        System.out.println(Line + sh_Line);
+        
+        System.out.printf("%-16s%-20d%-20d%-13d%-10.2f%n%n%n","Total", total_Re, 
+                total_NonRe, total_Incomes, total_occupancy);
+        
+        System.out.printf("%13s%s%s%s%s%s%s%s%n","Thank ", "you ", "for ", 
+                "using ","our ", "service, ", "Good ","bye...");
+        
+        System.out.printf("%57s%s%s%n","Printed ","by ","Serajaldeen");
+    }
+}
