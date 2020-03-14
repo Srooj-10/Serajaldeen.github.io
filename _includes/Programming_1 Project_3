@@ -1,0 +1,795 @@
+package Assignment;
+
+import java.util.Scanner;
+
+public class BA1_1741464_P3 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        /*
+         First assign some variables................
+         
+         ch for choice in the welcoming.
+         
+         chRating for the rating choices in the rating.
+         
+         rideMinute for the question about how much the trip well take in minute
+         
+         fareInfo for the summary about how much the user asked for details
+         about every ride
+         
+         fartEst for the summary about how much the user calculate the total 
+         ride fare for every car.
+        
+         submittedRatings for the summary about how much the user has rated 
+         every ride.
+        
+         rideDistance for the question about how far the trip.
+        
+         From line 62 to 84 are constants for the total ride fare calculations.
+        
+         The String variables are just to save time writing them.
+         */
+        int ch;
+        int chRatingX;
+        int chRatingXL;
+        int chRatingBlack;
+
+        int rideMinute;
+
+        int fareInfoX = 0;
+        int fareInfoXL = 0;
+        int fareInfoBlack = 0;
+
+        int fareEstX = 0;
+        int fareEstXL = 0;
+        int fareEstBlack = 0;
+
+        int submittedRatingsX = 0;
+        int submittedRatingsXL = 0;
+        int submittedRatingsBlack = 0;
+
+        double rideDistance;
+        double totalRideFare;
+
+        final double BASE_FARE_X = 3.2;
+        final double BASE_FARE_XL = 5.5;
+        final double BASE_FARE_BLACK = 9.5;
+
+        final double COST_MINUTE_X = 0.25;
+        final double COST_MINUTE_XL = 0.4;
+        final double COST_MINUTE_BLACK = 0.85;
+
+        final double COST_KM_X = 0.9;
+        final double COST_KM_XL = 1.25;
+        final double COST_KM_BLACK = 1.8;
+
+        final double SERVICE_FEE_BLACK = 1.3;
+
+        final double CANCELLATION_FEE_X = 8;
+        final double CANCELLATION_FEE_XL = 12;
+        final double CANCELLATION_FEE_BLACK = 20;
+
+        final double MINIMUM_FARE_X = 8;
+        final double MINIMUM_FARE_XL = 12;
+        final double MINIMUM_FARE_BLACK = 20;
+
+        String chRides;
+        String chOptions;
+
+        String stars = "***";
+        String hashes = "###";
+
+        String shortDashes = "-------------------------------------";
+        String dashes = "----------------------------------------------------";
+        String longDashes = "--------------------------------------------------"
+                + "----------------------";
+        String tildes = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
+
+        String please = "> Please enter your choice...";
+
+        String thanks = "Thank you for your rating!";
+
+        String yourRating = " You give rating > ";
+
+        String welcome = "Welcome to Uber Fare Calculator";
+
+        String invalid = "       Invalid Choice!! Please Try again";
+
+        //The program starts here, and the first loop.
+        while (true) {
+            System.out.println(dashes);
+            System.out.printf("%s%39s%10s%n", hashes, welcome, hashes);
+            System.out.println(dashes);
+
+            System.out.println("| 1   : Get fare information about available "
+                    + "rides |");
+
+            System.out.printf("| 2   : Get a Fare Estimate for your Journey"
+                    + "%8s%n", "|");
+
+            System.out.printf("| 3   : Submit Rating of your Ride%18s%n", "|");
+
+            System.out.printf("| 4   : Exit and display summary%20s%n", "|");
+
+            System.out.println(dashes);
+
+            System.out.print(please + "(1-4): ");
+            ch = input.nextInt();
+
+            //The switch well save a lot of time than the ifelse in this program
+            switch (ch) {
+                //Case one, and second loop.....................................
+                case 1:
+                    while (true) {
+                        System.out.println("\n" + shortDashes);
+
+                        System.out.printf("%-16sRIDES%16s%n", stars, stars);
+
+                        System.out.println(shortDashes);
+
+                        System.out.printf("| X or x : UberX%21s%n", "|");
+
+                        System.out.printf("| L or l : UberXL%20s%n", "|");
+
+                        System.out.printf("| B or b : UberBlack%17s%n", "|");
+
+                        System.out.printf("| R or r : Return to Main Menu"
+                                + "%7s", "|");
+
+                        System.out.println("\n" + shortDashes);
+
+                        System.out.print(please);
+                        chRides = input.next().toUpperCase();
+
+                        //switch
+                        switch (chRides) {
+                            case "X":
+                                //third loop.
+                                while (true) {
+                                    System.out.println("\n" + shortDashes);
+
+                                    System.out.printf("%-15sOPTIONS%15s%n",
+                                            stars, stars);
+
+                                    System.out.println(shortDashes);
+
+                                    System.out.printf("| B or b: Base fare"
+                                            + "%18s%n", "|");
+
+                                    System.out.printf("| M or m: Cost per "
+                                            + "minute%12s%n", "|");
+
+                                    System.out.printf("| K or k: Cost per km"
+                                            + "%16s%n", "|");
+
+                                    System.out.printf("| S or s: Service fee"
+                                            + "%16s%n", "|");
+
+                                    System.out.printf("| C or c: Cancellation "
+                                            + "fee%11s%n", "|");
+
+                                    System.out.printf("| F or f: Minimum fee"
+                                            + "%16s%n", "|");
+
+                                    System.out.printf("| R or r: Previous Menu"
+                                            + "%14s%n", "|");
+
+                                    System.out.println(shortDashes);
+
+                                    System.out.print(please);
+                                    chOptions = input.next().toUpperCase();
+                                    
+                                    //switch
+                                    switch (chOptions) {
+                                        case "B":
+                                            System.out.println("Base fare for"
+                                                    + " UberX is "
+                                                    + BASE_FARE_X + "SR");
+                                            continue;
+
+                                        case "M":
+                                            System.out.println("Cost per minute"
+                                                    + " for UberX is "
+                                                    + COST_MINUTE_X + "SR");
+                                            continue;
+
+                                        case "K":
+                                            System.out.println("Cost per "
+                                                    + "killometer for UberX is "
+                                                    + COST_KM_X + "SR");
+                                            continue;
+
+                                        case "S":
+                                            System.out.println("Service fee"
+                                                    + " for UberX is 0.0SR");
+                                            continue;
+
+                                        case "C":
+                                            System.out.println("Cancellation "
+                                                    + "fee for UberX is "
+                                                    + CANCELLATION_FEE_X
+                                                    + "SR");
+                                            continue;
+
+                                        case "F":
+                                            System.out.println("Minimum "
+                                                    + "fee for UberX is "
+                                                    + MINIMUM_FARE_X + "SR");
+                                            continue;
+
+                                        case "R":
+                                            /*
+                                              The code below to calculate how 
+                                              many times the user searched for 
+                                              infoes about the ride
+                                            */
+                                            fareInfoX++;
+                                            
+                                            break;
+                                            
+                                        /* 
+                                          Default in case if the user put 
+                                          a wrong input. 
+                                        */
+                                        default:
+                                            System.out.println(invalid);
+                                            continue;
+                                    /* 
+                                      the break and the continue in 243 and 245
+                                      for the user if he wants to exit the loop
+                                    */        
+                                    }
+                                    break;
+                                }
+                                continue;
+
+                            case "L":
+                                //forth loop.
+                                while (true) {
+                                    System.out.println("\n" + shortDashes);
+
+                                    System.out.printf("%-15sOPTIONS%15s%n",
+                                            stars, stars);
+
+                                    System.out.println(shortDashes);
+
+                                    System.out.printf("| B or b: Base fare"
+                                            + "%18s%n", "|");
+
+                                    System.out.printf("| M or m: Cost per "
+                                            + "minute%12s%n", "|");
+
+                                    System.out.printf("| K or k: Cost per km"
+                                            + "%16s%n", "|");
+
+                                    System.out.printf("| S or s: Service fee"
+                                            + "%16s%n", "|");
+
+                                    System.out.printf("| C or c: Cancellation "
+                                            + "fee%11s%n", "|");
+
+                                    System.out.printf("| F or f: Minimum fee"
+                                            + "%16s%n", "|");
+
+                                    System.out.printf("| R or r: Previous Menu"
+                                            + "%14s%n", "|");
+
+                                    System.out.println(shortDashes);
+
+                                    System.out.print(please);
+                                    chOptions = input.next().toUpperCase();
+
+                                    //switch
+                                    switch (chOptions) {
+                                        case "B":
+                                            System.out.println("Base fare for"
+                                                    + " UberXL is "
+                                                    + BASE_FARE_XL + "SR");
+                                            continue;
+
+                                        case "M":
+                                            System.out.println("Cost per minute"
+                                                    + " for UberXL is "
+                                                    + COST_MINUTE_XL + "SR");
+                                            continue;
+
+                                        case "K":
+                                            System.out.println("Cost per "
+                                                    + "killometer for UberXL "
+                                                    + "is " + COST_KM_XL
+                                                    + "SR");
+                                            continue;
+
+                                        case "S":
+                                            System.out.println("Service fee"
+                                                    + " for UberXL is 0.0SR");
+                                            continue;
+
+                                        case "C":
+                                            System.out.println("Cancellation "
+                                                    + "fee for UberXL is "
+                                                    + CANCELLATION_FEE_XL
+                                                    + "SR");
+                                            continue;
+
+                                        case "F":
+                                            System.out.println("Minimum "
+                                                    + "fee for UberXL is "
+                                                    + MINIMUM_FARE_XL + "SR");
+                                            continue;
+
+                                        case "R":
+                                            fareInfoXL++;
+                                            
+                                            break;
+
+                                        default:
+                                            System.out.println(invalid);
+                                            continue;
+
+                                    }
+                                    break;
+                                }
+                                continue;
+
+                            case "B":
+                                //fifth loop.
+                                while (true) {
+                                    System.out.println("\n" + shortDashes);
+
+                                    System.out.printf("%-15sOPTIONS%15s%n",
+                                            stars, stars);
+
+                                    System.out.println(shortDashes);
+
+                                    System.out.printf("| B or b: Base fare"
+                                            + "%18s%n", "|");
+
+                                    System.out.printf("| M or m: Cost per "
+                                            + "minute%12s%n", "|");
+
+                                    System.out.printf("| K or k: Cost per km"
+                                            + "%16s%n", "|");
+
+                                    System.out.printf("| S or s: Service fee"
+                                            + "%16s%n", "|");
+
+                                    System.out.printf("| C or c: Cancellation "
+                                            + "fee%11s%n", "|");
+
+                                    System.out.printf("| F or f: Minimum fee"
+                                            + "%16s%n", "|");
+
+                                    System.out.printf("| R or r: Previous Menu"
+                                            + "%14s%n", "|");
+
+                                    System.out.println(shortDashes);
+
+                                    System.out.print(please);
+                                    chOptions = input.next().toUpperCase();
+
+                                    //switch
+                                    switch (chOptions) {
+                                        case "B":
+                                            System.out.println("Base fare for"
+                                                    + " UberBlack is "
+                                                    + BASE_FARE_BLACK + "SR");
+                                            continue;
+
+                                        case "M":
+                                            System.out.println("Cost per minute"
+                                                    + " for UberBlack is "
+                                                    + COST_MINUTE_BLACK + "SR");
+                                            continue;
+
+                                        case "K":
+                                            System.out.println("Cost per "
+                                                    + "killometer for UberBlack"
+                                                    + " is " + COST_KM_BLACK
+                                                    + "SR");
+                                            continue;
+
+                                        case "S":
+                                            System.out.println("Service fee"
+                                                    + " for UberBlack is "
+                                                    + SERVICE_FEE_BLACK + "SR");
+                                            continue;
+
+                                        case "C":
+                                            System.out.println("Cancellation "
+                                                    + "fee for UberBlack is "
+                                                    + CANCELLATION_FEE_BLACK
+                                                    + "SR");
+                                            continue;
+
+                                        case "F":
+                                            System.out.println("Minimum "
+                                                    + "fee for UberBlack is "
+                                                    + MINIMUM_FARE_BLACK
+                                                    + "SR");
+                                            continue;
+
+                                        case "R":
+                                            fareInfoBlack++;
+                                            
+                                            break;
+
+                                        default:
+                                            System.out.println(invalid);
+                                            continue;
+
+                                    }
+                                    break;
+                                }
+                                continue;
+
+                            case "R":
+                                break;
+
+                            default:
+                                System.out.println(invalid);
+                                continue;
+
+                        }
+                        break;
+                    }
+                    continue;
+
+                //Case two starts here, and the sixth loop..................
+                case 2:
+                    while (true) {
+                        System.out.println("\n" + shortDashes);
+
+                        System.out.printf("%-16sRIDES%16s%n", stars, stars);
+
+                        System.out.println(shortDashes);
+
+                        System.out.printf("| X or x : UberX%21s%n", "|");
+
+                        System.out.printf("| L or l : UberXL%20s%n", "|");
+
+                        System.out.printf("| B or b : UberBlack%17s%n", "|");
+
+                        System.out.printf("| R or r : Return to Main Menu%7s",
+                                "|");
+
+                        System.out.println("\n" + shortDashes);
+
+                        System.out.print(please);
+                        chRides = input.next().toUpperCase();
+
+                        //switch
+                        switch (chRides) {
+                            case "X":
+                                System.out.println("\nPlease provide the "
+                                        + "information about your journey: ");
+
+                                System.out.println(dashes);
+
+                                System.out.print("Ride time in minutes: ");
+                                rideMinute = input.nextInt();
+
+                                System.out.print("Ride distance in KM(s): ");
+                                rideDistance = input.nextDouble();
+
+                                System.out.println(tildes);
+
+                                //Calcultions for the ride fare.
+                                totalRideFare
+                                        = (BASE_FARE_X
+                                        + (rideMinute * COST_MINUTE_X)
+                                        + (rideDistance * COST_KM_X));
+
+                                if (totalRideFare < MINIMUM_FARE_X) {
+                                    System.out.printf(" > Expected ride fare: "
+                                            + "%.2f%s%2s%n", MINIMUM_FARE_X,
+                                            "SR", "<");
+                                } else {
+                                    System.out.printf(" > Expected ride fare: "
+                                            + "%.2f%s%2s%n", totalRideFare,
+                                            "SR", "<");
+                                }
+                                
+                                System.out.println(tildes);
+                                /*
+                                  the code below to calculate how many time the 
+                                  user used the ride calculations in the program
+                                */
+                                fareEstX++;
+                                continue;
+
+                            case "L":
+                                System.out.println("\nPlease provide the "
+                                        + "information about your journey: ");
+
+                                System.out.println(dashes);
+
+                                System.out.print("Ride time in minutes: ");
+                                rideMinute = input.nextInt();
+
+                                System.out.print("Ride distance in KM(s): ");
+                                rideDistance = input.nextDouble();
+
+                                System.out.println(tildes);
+
+                                //Calcultions for the ride fare.
+                                totalRideFare
+                                        = (BASE_FARE_XL
+                                        + (rideMinute * COST_MINUTE_XL)
+                                        + (rideDistance * COST_KM_XL));
+
+                                if (totalRideFare < MINIMUM_FARE_XL) {
+                                    System.out.printf(" > Expected ride fare: "
+                                            + "%.2f%s%2s%n", MINIMUM_FARE_XL,
+                                            "SR", "<");
+                                } else {
+                                    System.out.printf(" > Expected ride fare: "
+                                            + "%.2f%s%2s%n", totalRideFare,
+                                            "SR", "<");
+                                }
+
+                                System.out.println(tildes);
+                                
+                                fareEstXL++;
+                                continue;
+
+                            case "B":
+                                System.out.println("\nPlease provide the "
+                                        + "information about your journey: ");
+
+                                System.out.println(dashes);
+
+                                System.out.print("Ride time in minutes: ");
+                                rideMinute = input.nextInt();
+
+                                System.out.print("Ride distance in KM(s): ");
+                                rideDistance = input.nextDouble();
+
+                                System.out.println(tildes);
+
+                                //Calcultions for the ride fare.
+                                totalRideFare
+                                        = (BASE_FARE_BLACK
+                                        + (rideMinute * COST_MINUTE_BLACK)
+                                        + (rideDistance * COST_KM_BLACK)
+                                        + SERVICE_FEE_BLACK);
+
+                                if (totalRideFare < MINIMUM_FARE_BLACK) {
+                                    System.out.printf(" > Expected ride fare: "
+                                            + "%.2f%s%2s%n", MINIMUM_FARE_BLACK,
+                                            "SR", "<");
+                                } else {
+                                    System.out.printf(" > Expected ride fare: "
+                                            + "%.2f%s%2s%n", totalRideFare,
+                                            "SR", "<");
+                                }
+
+                                System.out.println(tildes);
+                                
+                                fareEstBlack++;
+                                continue;
+
+                            case "R":
+                                break;
+
+                            default:
+                                System.out.println(invalid);
+                                continue;
+
+                        }
+                        break;
+                    }
+                    continue;
+
+                //Case three starts here, and the seventh loop..................
+                case 3:
+                    while (true) {
+                        System.out.println("\n" + shortDashes);
+
+                        System.out.printf("%-16sRIDES%16s%n", stars, stars);
+
+                        System.out.println(shortDashes);
+
+                        System.out.printf("| X or x : UberX%21s%n", "|");
+
+                        System.out.printf("| L or l : UberXL%20s%n", "|");
+
+                        System.out.printf("| B or b : UberBlack%17s%n", "|");
+
+                        System.out.printf("| R or r : Return to Main Menu%7s",
+                                "|");
+
+                        System.out.println("\n" + shortDashes);
+
+                        System.out.print(please);
+                        chRides = input.next().toUpperCase();
+
+                        //switch
+                        switch (chRides) {
+                            case "X":
+                                System.out.println("\n" + shortDashes);
+
+                                System.out.printf("%-16sRATING%15s%n", stars,
+                                        stars);
+
+                                System.out.println(shortDashes);
+
+                                System.out.printf("| 1 : Poor%27s%n", "|");
+
+                                System.out.printf("| 2 : Borderline%21s%n",
+                                        "|");
+
+                                System.out.printf("| 3 : Satisfactory%19s%n",
+                                        "|");
+
+                                System.out.printf("| 4 : Good%27s%n", "|");
+
+                                System.out.printf("| 5 : Outstanding%20s%n",
+                                        "|");
+
+                                System.out.println(shortDashes);
+
+                                System.out.print(please + "(1-5): ");
+                                chRatingX = input.nextInt();
+
+                                if (chRatingX == 1 || chRatingX == 2
+                                        || chRatingX == 3 || chRatingX == 4
+                                        || chRatingX == 5) {
+
+                                    System.out.println("\n" + thanks);
+
+                                    System.out.println(tildes);
+
+                                    System.out.println(yourRating + chRatingX
+                                            + " <");
+
+                                } else {
+                                    System.out.println(invalid);
+                                }
+                                
+                                submittedRatingsX++;
+                                continue;
+
+                            case "L":
+                                System.out.println("\n" + shortDashes);
+
+                                System.out.printf("%-16sRATING%15s%n", stars,
+                                        stars);
+
+                                System.out.println(shortDashes);
+
+                                System.out.printf("| 1 : Poor%27s%n", "|");
+
+                                System.out.printf("| 2 : Borderline%21s%n",
+                                        "|");
+
+                                System.out.printf("| 3 : Satisfactory%19s%n",
+                                        "|");
+
+                                System.out.printf("| 4 : Good%27s%n", "|");
+
+                                System.out.printf("| 5 : Outstanding%20s%n",
+                                        "|");
+
+                                System.out.println(shortDashes);
+
+                                System.out.print(please + "(1-5): ");
+                                chRatingXL = input.nextInt();
+
+                                if (chRatingXL == 1 || chRatingXL == 2
+                                        || chRatingXL == 3 || chRatingXL == 4
+                                        || chRatingXL == 5) {
+
+                                    System.out.println("\n" + thanks);
+
+                                    System.out.println(tildes);
+
+                                    System.out.println(yourRating + chRatingXL
+                                            + " <");
+
+                                } else {
+                                    System.out.println(invalid);
+                                }
+                                
+                                submittedRatingsXL++;
+                                continue;
+
+                            case "B":
+                                System.out.println("\n" + shortDashes);
+
+                                System.out.printf("%-16sRATING%15s%n", stars,
+                                        stars);
+
+                                System.out.println(shortDashes);
+
+                                System.out.printf("| 1 : Poor%27s%n", "|");
+
+                                System.out.printf("| 2 : Borderline%21s%n",
+                                        "|");
+
+                                System.out.printf("| 3 : Satisfactory%19s%n",
+                                        "|");
+
+                                System.out.printf("| 4 : Good%27s%n", "|");
+
+                                System.out.printf("| 5 : Outstanding%20s%n",
+                                        "|");
+
+                                System.out.println(shortDashes);
+
+                                System.out.print(please + "(1-5): ");
+                                chRatingBlack = input.nextInt();
+
+                                if (chRatingBlack == 1 || chRatingBlack == 2
+                                        || chRatingBlack == 3
+                                        || chRatingBlack == 4
+                                        || chRatingBlack == 5) {
+
+                                    System.out.println("\n" + thanks);
+
+                                    System.out.println(tildes);
+
+                                    System.out.println(yourRating
+                                            + chRatingBlack + " <");
+
+                                } else {
+                                    System.out.println(invalid);
+                                }
+                                
+                                submittedRatingsBlack++;
+                                continue;
+
+                            case "R":
+                                break;
+
+                            default:
+                                System.out.println(invalid);
+                                continue;
+                        }
+                        break;
+
+                    }
+                    continue;
+
+                //Case four starts here.........................................
+                //This case is for the summary and to exit the program.
+                case 4:
+                    System.out.println("\n" + longDashes);
+
+                    System.out.printf("%-32sSUMMARY%33s%n", hashes, hashes);
+
+                    System.out.println(longDashes);
+
+                    System.out.println("| Ride        | # of Fare Info. "
+                            + "| # Fare Est. | # of Submitted Ratings | ");
+
+                    System.out.println(longDashes);
+
+                    System.out.printf("%14s%16d%2s%12d%2s%23d%2s%n",
+                            "| UberX       |", fareInfoX, "|", fareEstX, "|",
+                            submittedRatingsX, "|");
+
+                    System.out.printf("%14s%16d%2s%12d%2s%23d%2s%n",
+                            "| UberXL      |", fareInfoXL, "|", fareEstXL, "|",
+                            submittedRatingsXL, "|");
+
+                    System.out.printf("%14s%16d%2s%12d%2s%23d%2s%n",
+                            "| UberBlack   |", fareInfoBlack, "|", fareEstBlack,
+                            "|", submittedRatingsBlack, "|");
+
+                    System.out.println(longDashes);
+
+                    System.out.println(" Thank you for using Uber Fare "
+                            + "Calculation System!\n");
+                    
+                    System.exit(0);
+                    break;
+
+                default:
+                    System.out.println(invalid + "\n");
+            }
+        }
+    }
+}
