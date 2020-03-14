@@ -1,0 +1,229 @@
+package Assignment;
+
+import java.util.Scanner;
+public class P21741464BA1 {
+    
+    public static void main(String[] args) {
+        Scanner i = new Scanner(System.in);
+        
+        /*
+        First assign some variables.
+        -First six string to make it easy and good to read rather than typing
+          the same string over and over again.
+        -The last four just some inegers and doubles.
+        */
+        
+        String asterisks = "*************************************************";
+        String columns = "||";
+        String dashes = "-----------------------------------";
+        String taxId1 = "Enter; Taxpayer Identification Number (ITIN): ";
+        String taxId2 = "Enter; Tax File Number (TFN): ";
+        String thanks = "Thanks for Using Taxation System";
+        String firstName;
+        String lastName;
+        String numberIdString;
+        
+        int choice;
+        int numberId;
+        int numberId4_5;
+        double salary;
+        double tax;
+        
+        System.out.println(columns + asterisks + columns);
+        System.out.printf("%39s%n","Welcome to Taxation System");
+        System.out.println(columns + asterisks + columns);
+        
+        System.out.println("Please select the correct choice");
+        System.out.println(" 1.America");
+        System.out.println(" 2.Australia");
+        System.out.print("Please Enter the choice ");
+        choice = i.nextInt();
+        
+        System.out.println(dashes);
+        
+        //switch is faster and easier than the if-else statments in this case
+        switch (choice) {
+            case 1:
+                System.out.print(taxId1);
+                numberId = i.nextInt();
+                
+                //This is an easy way to look for the forth and fifth numbers
+                numberId4_5 = (numberId % 1000000) / 10000;
+                
+                /*
+                  I need to make the Id number to string so I could calculate 
+                  if it is a nine digits number
+                  This is an easy way to turn the integer to String  
+                */ 
+                numberIdString = numberId + "";
+                
+                //To calculate if it is a nine numbers string
+                if (numberIdString.length() == 9) {
+                    if (numberId >= 900000000 && numberId <= 999999999) {
+                        if (numberId4_5 >= 70 && numberId4_5 <= 88 || 
+                            numberId4_5 >= 90 && numberId4_5 <= 92 ||
+                            numberId4_5 >= 94 && numberId4_5 <= 99) {
+                            System.out.println(dashes + "\n\n");
+                            System.out.print("Enter your full name: ");
+                            /*
+                              In this way i will turn both first and last
+                              names to upper case so i can get later the first
+                              charcters.
+                            */
+                            firstName = i.next().toUpperCase();
+                            lastName = i.next().toUpperCase();
+                            
+                            //Using first charcters from first and last names
+                            System.out.println(
+                            "Welcome your ID is " + firstName.charAt(0) +
+                                    lastName.charAt(0) + numberId);
+                            System.out.print("Please, Enter your yearly Salary"
+                                    + " in 0.0 Format :");
+                            salary = i.nextDouble();
+                            
+                            if (salary >=0 && salary <= 8700) {
+                                tax = salary * 0.1;
+                                System.out.printf("\nDear Citizen !!Your "
+                                        + "Tax-Payable amount is %.1f$%n",tax);
+                    
+                            } else if (salary >=8701 && salary <= 35350){
+                                tax = salary * 0.15;
+                                System.out.printf("\nDear Citizen !!Your "
+                                        + "Tax-Payable amount is %.1f$%n",tax);
+                        
+                            } else if (salary >=35351 && salary <= 85650){
+                                tax = salary * 0.25;
+                                System.out.printf("\nDear Citizen !!Your "
+                                        + "Tax-Payable amount is %.1f$%n",tax);
+                        
+                            } else if (salary >=85651 && salary <= 178650){
+                                tax = salary * 0.28;
+                                System.out.printf("\nDear Citizen !!Your "
+                                        + "Tax-Payable amount is %.1f$%n",tax);
+                    
+                            } else if (salary >=178651 && salary <= 388350){
+                                tax = salary * 0.33;
+                                System.out.printf("\nDear Citizen !!Your "
+                                        + "Tax-Payable amount is %.1f$%n",tax);
+                    
+                            } else if (salary >=388351){
+                                tax = salary * 0.35;
+                                System.out.printf("\nDear Citizen !!Your "
+                                        + "Tax-Payable amount is %.1f$%n",tax);
+                    
+                            } else {
+                                System.out.println("\nIncorrect Salary Value\n"
+                                        + "Try Again");
+                                System.out.println(dashes);
+                                System.out.println(thanks);
+                                
+                                System.exit(0);
+                            }
+                    
+                            System.out.println(dashes);
+                            System.out.println(thanks);
+                        } else {
+                            System.out.println("\nIncorrect Format,"
+                                    + " please check the number.\nTry Again");
+                            System.out.println(dashes);
+                            System.out.println(thanks);
+                            
+                            System.exit(0);
+                        }
+                    } else {
+                        System.out.println("\nNumber must begin with 9.\n"
+                                + "Try Again");
+                        System.out.println(dashes);
+                        System.out.println(thanks);
+                        
+                        System.exit(0);
+                    }
+                    
+                } else {
+                    System.out.println("\nThere must be 9 numbers.\nTry Again");
+                    System.out.println(dashes);
+                    System.out.println(thanks);
+                    
+                    System.exit(0);
+                }
+                
+                break;
+                
+            case 2:
+                System.out.print(taxId2);
+                numberId = i.nextInt();
+                
+                numberIdString = numberId + "";
+                
+                if (numberIdString.length() == 9) {
+                    System.out.println(dashes + "\n\n");
+                    System.out.print("Enter your full name:");
+                    firstName = i.next().toUpperCase();
+                    lastName = i.next().toUpperCase();
+                            
+                    System.out.println(
+                    "Welcome your ID is " + firstName.charAt(0) 
+                            + lastName.charAt(0) + "-" + numberId);
+                    System.out.print("Please, Enter your yearly Salary: ");
+                    salary = i.nextDouble();
+                            
+                    if (salary >=0 && salary <= 6000) {
+                        /* 
+                            since the tax-payable amount from 0 to 6000 is zero
+                            I wrote it like this, because there is no need to 
+                            calculate it.
+                        */
+                        System.out.println("\nDear Citizen !!Your "
+                                + "Tax-Payable amount is 0$");
+                    
+                    } else if (salary >=6001 && salary <= 37000){
+                        tax = salary * 0.15;
+                        System.out.printf("\nDear Citizen !!Your "
+                                + "Tax-Payable amount is %.1f$%n",tax);
+                        
+                    } else if (salary >=37001 && salary <= 80000){
+                        tax = salary * 0.3;
+                        System.out.printf("\nDear Citizen !!Your "
+                                + "Tax-Payable amount is %.1f$%n",tax);
+                        
+                    } else if (salary >=80001 && salary <= 180000){
+                        tax = salary * 0.37;
+                        System.out.printf("\nDear Citizen !!Your "
+                                + "Tax-Payable amount is %.1f$%n",tax);
+                    
+                    } else if (salary >=180001){
+                        tax = salary * 0.45;
+                        System.out.printf("\nDear Citizen !!Your "
+                                + "Tax-Payable amount is %.1f$%n",tax);
+                    
+                    } else {
+                        System.out.println("\nIncorrect Salary Value\n" 
+                                + "Try Again");
+                        System.out.println(dashes);
+                        System.out.println(thanks);
+                        System.exit(0);
+                    }
+                    
+                    System.out.println(dashes);
+                    System.out.println(thanks);
+                    
+                } else {
+                    System.out.println("\nThere must be 9 numbers.\nTry Again");
+                    System.out.println(dashes);
+                    System.out.println(thanks);
+                    
+                    System.exit(0);
+                }
+                
+                break;
+                
+            default:
+                System.out.println("\nIt should be Either 1 or 2 :\nTry Again");
+                System.out.println(dashes);
+                System.out.println(thanks);
+                    
+                System.exit(0);
+                throw new AssertionError();
+        }
+    }
+}
