@@ -1,0 +1,461 @@
+package Assignment;
+
+import java.util.Scanner;
+
+public class P41741464BA1 {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        /*
+         As always I like to assign the variables first.
+         The first strings just to save time.
+         The intrgers are for the choices and for the integers methods answers.
+         capitalAnswer mean the answer for the choice 2 about how many words 
+         start with capital letter.
+         */
+        String line = "--------------------------------------------------------"
+                + "--------";
+        String shortLine = "---------";
+        String choices = "> Please enter your choice: ";
+        String invalid = ">    Wrong selection. Try again.\n\n";
+
+        int choice;
+        int printChoice;
+
+        int tokensCounterAnswer;
+        int capitalAnswer;
+
+        String textMessage;
+
+        /*
+         First loop, this loop is important in case if the user didn't write 
+         anything so it well display the first analyse again.
+         */
+        while (true) {
+
+            System.out.println("|" + line + "|");
+            System.out.printf("%s%-13sSyntactic Analysis for a Text Message%14s"
+                    + "%s%n", "|", shortLine, shortLine, "|");
+            System.out.println("|" + line + "|");
+
+            System.out.println(" > Enter a text message:");
+            textMessage = input.nextLine();
+
+            System.out.println("\n");
+
+            /* 
+             Length is better than indexOf(0) = -1 in this case,
+             because length well scan the whole line, the continue to make
+             the loop repeat itself from the begininng
+             */
+            if (textMessage.length() == 0) {
+                continue;
+            }
+
+            //Second loop for the main menu display.
+            while (true) {
+                displayMainMenu();
+
+                choice = input.nextInt();
+
+                switch (choice) {
+
+                    case 1:
+
+                        tokensCounterAnswer = tokensCounter(textMessage);
+                        System.out.println("  The total count of tokens = "
+                                + tokensCounterAnswer + " tokens\n\n");
+
+                        break;
+
+                    case 2:
+
+                        capitalAnswer = startWithCapital(textMessage);
+                        System.out.println("  The num of words starting with a"
+                                + " capital letter = " + capitalAnswer
+                                + " words\n\n");
+
+                        continue;
+
+                    case 3:
+
+                        //Third and last loop for the print menu display.
+                        while (true) {
+
+                            System.out.println("\n");
+
+                            displayPrintMenu();
+
+                            printChoice = input.nextInt();
+
+                            switch (printChoice) {
+
+                                case 1:
+
+                                    printTokens(textMessage);
+
+                                    continue;
+
+                                case 2:
+
+                                    printTokens(textMessage, 0);
+
+                                    continue;
+
+                                case 3:
+
+                                    printTokens(textMessage, 1);
+
+                                    continue;
+
+                                case 4:
+
+                                    break;
+
+                                default:
+                                    System.out.println(invalid);
+                                    continue;
+                            }
+                            break;
+
+                        }
+                        continue;
+
+                    case 4:
+
+                        System.out.print("> Enter the token :");
+                        String findToken = input.next();
+                        findToken(textMessage, findToken);
+
+                        if (textMessage.contains(findToken)) {
+
+                            System.out.println("> The token " + findToken
+                                    + " exists in the message.");
+                        } else {
+
+                            System.out.println("> The token " + findToken
+                                    + " does not exist in the message.");
+                        }
+
+                        System.out.println("\n");
+
+                        continue;
+
+                    case 5:
+
+                        System.out.printf("%-6sExiting the program.....%n", ">");
+                        System.out.printf("%-6sGoodbye!.....%n", ">");
+
+                        System.exit(0);
+
+                    default:
+                        System.out.println(invalid);
+                        continue;
+                }
+            }
+        }
+    }
+
+    public static void displayMainMenu() {
+
+        // Assign line and shortLine variables to save time.
+        String line = "--------------------------------------------------------"
+                + "--------";
+        String shortLine = "---------";
+
+        //Displaying the Main menu for the MainMenu method.
+        System.out.println("|" + line + "|");
+        System.out.printf("%s%-13sSyntactic Analysis for a Text Message%14s%s"
+                + "%n", "|", shortLine, shortLine, "|");
+        System.out.println("|" + line + "|");
+
+        System.out.printf("%-4s1. Compute tokens count (words, digits, others)."
+                + "%14s%n", "|", "|");
+        System.out.printf("%-4s2. Compute the num of words starting with a "
+                + "capital letter.%3s%n", "|", "|");
+        System.out.printf("%-4s3. Print the list of tokens.%34s%n", "|", "|");
+        System.out.printf("%-4s4. Find a token in the message.%31s%n", "|",
+                "|");
+        System.out.printf("%-4s5. Exit.%54s%n", "|", "|");
+
+        System.out.println("|" + line + "|");
+
+        //The choice print.
+        System.out.print("> Please enter your choice: ");
+
+    }
+
+    public static void displayPrintMenu() {
+
+        String line = "--------------------------------------------------------"
+                + "--------";
+        String shortLine = "---------";
+
+        //Displaying the Main menu for the PrintMenu method.
+        System.out.println("|" + line + "|");
+        System.out.printf("%s%-13sSyntactic Analysis for a Text Message%14s%s"
+                + "%n", "|", shortLine, shortLine, "|");
+        System.out.println("|" + line + "|");
+
+        System.out.printf("%-22sPrint Options Menu%26s%n", "|", "|");
+
+        System.out.printf("%-4s1. Print all the tokens.%38s%n", "|", "|");
+        System.out.printf("%-4s2. Print the digit tokens.%36s%n", "|", "|");
+        System.out.printf("%-4s3. Print the word tokens.%37s%n", "|", "|");
+        System.out.printf("%-4s4. Return to the main menu.%35s%n", "|", "|");
+
+        System.out.println("|" + line + "|");
+
+        //The choice print.
+        System.out.print("> Please enter your choice: ");
+
+    }
+
+    public static void printTokens(String message) {
+
+        //Assigning a string for the seperating code.
+        String token;
+        
+        //I prefer the do loop since there is no specific condition in the loop.
+        do {
+            /*
+             !contain means there is no more any space and this is the last 
+             word in the massege
+             */
+            if (!message.contains(" ")) {
+
+                System.out.println(message);
+
+                //break to leave this loop since there is no more words.
+                break;
+            }
+
+            //This well seperate every token from the other by a coma.
+            int w = message.indexOf(" ");
+
+            token = message.substring(0, w);
+
+            /*
+             The code well print the coma after the word even if there is only
+             one word in the first place, I didn't know how to solve this 
+             problem sadly.
+             */
+            System.out.print(token + " , ");
+
+            message = message.substring(w + 1);
+
+        } while (true);
+    }
+
+    public static void printTokens(String message, int choice) {
+
+        boolean lastToken = false;
+
+        /*
+         Assign some variables first, digits and words will be increased later.
+         Assigning name string for the seperating code.
+         */
+        int digits = 0;
+        int words = 0;
+
+        String token;
+
+        //First loop in the printTokens method, ! == lastToken is false
+        while (!lastToken) {
+
+            //First if statment, if message doesn't contain space.
+            if (!message.contains(" ")) {
+
+                lastToken = true;
+            }
+
+            //Second if statment.
+            if (lastToken) {
+                token = message;
+
+            } else {
+                int w = message.indexOf(" ");
+
+                token = message.substring(0, w);
+
+            }
+
+            /*
+             Third if statment, I made the choice either zero or one to make 
+             it eaiser to understand 
+             */
+            if (choice == 0) {
+
+                int i = 0;
+                boolean digitToken = true;
+
+                //Second loop in the printTokens method.
+                while (token.length() > i) {
+
+                    char ch = token.charAt(i);
+
+                    if (!Character.isDigit(ch)) {
+
+                        digitToken = false;
+                        break;
+                    }
+
+                    i++;
+                }
+
+                //Fourth if statment, to count the digits
+                if (digitToken) {
+
+                    System.out.print(token + " , ");
+
+                    digits++;
+
+                }
+
+            } else if (choice == 1) {
+
+                int i = 0;
+                boolean isLetter = true;
+
+                //Third and last loop in the printTokens method.
+                while (token.length() > i) {
+
+                    char c = token.charAt(i);
+
+                    if (!Character.isLetter(c)) {
+
+                        isLetter = false;
+                        break;
+                    }
+                    i++;
+                }
+
+                //Fifth if statment.
+                if (isLetter) {
+
+                    System.out.print(token + " , ");
+                    words++;
+                }
+            }
+
+            //Sixth if statment, to take last tokens
+            if (!lastToken) {
+                int w = message.indexOf(" ");
+
+                message = message.substring(w + 1);
+            }
+        }
+
+        //Seventh and last if statment, for the invalid choices.
+        if (digits == 0 && choice == 0) {
+
+            System.out.println("  No digit tokens in the message.");
+
+        } else if (words == 0 && choice == 1) {
+
+            System.out.println("  No words tokens in the message.");
+
+        } else {
+
+            System.out.println();
+
+        }
+    }
+
+    public static int tokensCounter(String message) {
+
+        //Beginning of tokensCounter loop, and assigning the integer count.
+        int count = 0;
+
+        //The only loop, to count tokens.
+        do {
+
+            if (!message.contains(" ")) {
+
+                count++;
+
+                break;
+
+            } else {
+                count++;
+
+                int w = message.indexOf(" ");
+
+                message = message.substring(w + 1);
+
+            }
+        } while (true);
+
+        //returning the integer method.
+        return count;
+    }
+
+    public static int startWithCapital(String message) {
+
+        //Assigning some variables for the code.
+        int count = 0;
+        boolean lastToken = false;
+
+        //Assigning name string for the seperating code.
+        String name;
+
+        while (!lastToken) {
+
+            char capitalWord = message.charAt(0);
+
+            if (!message.contains(" ")) {
+
+                lastToken = true;
+
+                name = message;
+
+            } else if (!lastToken) {
+
+                int w = message.indexOf(" ");
+
+                name = message.substring(0, w);
+
+            }
+
+            /*
+             This if statment search for words that start with capital letter.
+             */
+            if (Character.isUpperCase(capitalWord)) {
+
+                count++;
+            }
+
+            /*
+             This if statment is importmant to search for another word start 
+             with capital letter.
+             */
+            if (!lastToken) {
+
+                int w = message.indexOf(" ");
+
+                message = message.substring(w + 1);
+
+            }
+        }
+
+        //returning the integer method.
+        return count;
+
+    }
+
+    public static boolean findToken(String text, String token) {
+
+        /*
+         A simply boolean just to tell the program in case there is the written 
+         word in the first massege or not.
+        
+         Actually this much more easier than i thought.
+         */
+        boolean search = text.contains(token);
+
+        // Returning the boolean and the end of the program.
+        return search;
+
+    }
+}
